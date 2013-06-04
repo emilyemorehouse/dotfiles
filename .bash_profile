@@ -4,7 +4,9 @@
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
-
+alias cd='cd && ls -lah'
+alias c='clear'
+alias cd.='cd .. && ls -lah'
 alias la='ls -a'
 alias ll='ls -l'
 alias l='ls -lah'
