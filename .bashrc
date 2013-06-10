@@ -38,4 +38,3 @@ export CLICOLOR=1
 export LSCOLORS=FxbxbxdxDxegedabaeaced
 export TERM=xterm-256color
 PS1='\[\e[1;35m\]\u\[\e[0m\]@\[\e[0;37m\]\h\[\e[0m\]:\[\e[1;33m\]\W\[\e[0m\]\$ '
-
