@@ -30,9 +30,9 @@ alias ethdown='sudo /sbin/ifconfig en0 down'
 alias ethup='sudo /sbin/ifconfig en0 up'
 
 # show/hide all hidden files
-alias reveal='sh ~/dotfiles/revealfiles.sh'
-# alias showall='defaults write com.apple.Finder AppleShowAllFiles TRUE'
-# alias hideall='defaults write com.apple.Finder AppleShowAllFiles FALSE'
+# alias reveal='sh ~/dotfiles/revealfiles.sh'
+alias showall='defaults write com.apple.Finder AppleShowAllFiles TRUE'
+alias hideall='defaults write com.apple.Finder AppleShowAllFiles FALSE'
 
 export CLICOLOR=1
 export LSCOLORS=FxbxbxdxDxegedabaeaced
