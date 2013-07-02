@@ -31,8 +31,9 @@ if [ ! -d $olddir ]; then
     for file in $files; do
         echo "Copying any existing dotfiles from ~ to $olddir"
         cp  ~/.$file ~/dotfiles_old/
-        echo "Creating symlink to $file in home directory."
-        ln -s ~/.$file $dir/_$file
+        # echo "Creating symlink to $file in home directory."
+        # ln -s ~/.$file $dir/_$file
+        cp $dir/_$file ~/.$file
     done
 fi
 echo "Backups are completed."
