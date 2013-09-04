@@ -33,7 +33,8 @@ if [ ! -d $olddir ]; then
         cp  ~/.$file ~/dotfiles_old/
         # echo "Creating symlink to $file in home directory."
         # ln -s ~/.$file $dir/_$file
-        cp $dir/_$file ~/.$file
+        rm ~/.$file
+        cp $dir/.$file ~/.$file
     done
 fi
 echo "Backups are completed."
