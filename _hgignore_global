@@ -1,1 +1,4 @@
-/Users/emily/.hgignore_global
+syntax: glob
+
+*~
+.DS_Store

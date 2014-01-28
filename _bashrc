@@ -1,1 +1,57 @@
-/Users/emily/.bashrc
+# ALIASES AND HELPFUL KEYBINDINGS
+# Function to list directory after changing
+# This is one of my favorite things ever.
+function cl () {
+    cd "$@" && clear && ls -lah
+    }
+alias c='clear'
+alias la='ls -a'
+alias ll='ls -l'
+alias l='ls -laAhF'
+alias dir='ls -a'
+
+# change directory aliases
+alias cd.='cd .. && ls -lah'
+alias cd..='cd ..'
+alias cd....='cd ../../../'
+alias cd.....='cd ../../../../'
+alias cd......='cd ../../../../../'
+
+# Quick access for files
+alias goto_sp='cd ~/Remote\ Storage/Google\ Drive/SPRING\ 2014/'
+alias goto_py='cd ~/Remote\ Storage/Google\ Drive/SPRING\ 2014/CIS4930\ Python'
+
+
+# ALL DA PATH SETTINGS
+# Setting PATH for Python 2.7
+export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+
+export PATH="$PATH:/usr/local/smlnj-110.75/bin"
+
+export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH="$PATH:/Library/PostgreSQL/9.3/bin"
+export PGDATA="/Library/PostgreSQL/9.3/data"
+export PGHOST=localhost
+
+export PATH="$PATH:/usr/bin/perl"
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
+
+# show/hide all hidden files using script
+alias togglehidden='sh ~/dotfiles/togglehidden.sh'
+
+
+# network connection aliases
+alias airdown='sudo networksetup -setairportpower en0 off'
+alias airup='sudo networksetup -setairportpower en0 on'
+
+
+# TERMINAL COLORS
+export CLICOLOR=1
+export LSCOLORS=FxbxbxdxDxegedabaeaced
+export TERM=xterm-256color
+PS1='\[\e[1;35m\]\u\[\e[0m\]@\[\e[0;33m\]\h\[\e[0m\]:\[\e[1;31m\]\W\[\e[0m\]\> '

@@ -1,1 +1,106 @@
-/Users/emily/.Xresources
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!                                                                             !
+!                   4Dgifts customized ~/.Xresources file                      !
+!                                                                             !
+!  DESCRIPTION                                                                !
+!                                                                             !
+!      This file contains resource settings for the 4Dgifts used-id           !
+!      environment which will customize all X applications at startup         !
+!      time.  The scope of such customizations also include resources         !
+!      for the 4Dwm and mwm window managers.  The format of resource          !
+!      files  is defined in Xlib - C Language X Interface.                    !
+!                                                                             !
+!       The format of resource specification is:                              !
+!                                                                             !
+!   ResourceLine  =Comment|ResourceSpec                                       !
+!   Comment       ="!" string | <empty line>                                  !
+!   ResourceSpec  =WhiteSpace ResourceName WhiteSpace ":" WhiteSpace value    !
+!   ResourceName  =[Binding] ComponentName {Binding ComponentName }           !
+!   Binding       ="."|"*"                                                    !
+!   WhiteSpace    ={" "|"\t"}                                                 !
+!   ComponentName ={"A"-"Z"|"a"-"z"|"0"-"9"|"_"|"-"}                          !
+!   value         =string                                                     !
+!   string        ={<any character not including "\n">                        !
+!                                                                             !
+!   where { } holds zero or more occurences of the enclosed elements.         !
+!   If the last char of a line is \ the line is assumed to be                 !
+!   continued on the next line.                                               !
+!                                                                             !
+!   Arbitrary octets can be included in strings.  \000 includes               !
+!   the NULL character.  \nnn includes a character with the octal             !
+!   value of nnn.  New lines can be represented as "\n".                      !
+!                                                                             !
+! Or perhaps in a less formal (non) grammar                                   !
+!                                                                             !
+!       <prog>|<class>*<resource>:  <value>                                   !
+!                                                                             !
+!       where:                                                                !
+!                                                                             !
+!             <prog>         program name  (X or GL)                          !
+!             <class>        instance name of program                         !
+!             <resource>     resource name                                    !
+!             <value>        value assigned to resource                       !
+!                                                                             !
+!  REFERENCES                                                                 !
+!                                                                             !
+!      For a full description of resource settings (there's a LOT more),      !
+!      see the 4Dwm(1X) and mwm(1X) man pages, as well the two books,         !
+!      "OSF/Motif Programmer's Guide" (especially Part II, Motif Window       !
+!      Manager, Chapter 5, Managing Menus, Mouse Buttons, and Keyboard        !
+!      Bindings), and O'Reilly, Vol. 3, "X Window System User's Guide."       !
+
+!       
+!                                                                             !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!  Caution watch for comments that expose things that look
+!  like comments to the 'c' preprocessor.
+!
+!  Comment out any line to use the "default" values
+!  specified by the file in /usr/lib/X11/app-defaults/.
+!                    What if * wildcard was used here ^
+!
+!
+
+
+!		Define some customizations for xwsh
+
+xwsh*background:		#00466a
+xwsh*foreground:		grey80
+xwsh*cursorTextColor:		white
+xwsh*cursorPageColor:		red
+xwsh*barPointerShape:		spider
+xwsh*clientDecoration: 		+minimize +maximize +menu +border
+xwsh*autoFork:			on
+xwsh*selectionTextColor:	white
+xwsh*selectionPageColor:	163
+xwsh*geometry:			80x24
+xwsh*barWidth:			10
+xwsh*font:			-*-lucidatypewriter-medium-r-normal-*-14-140-*
+xwsh*OverFirst:			true
+
+
+!		Set certain application resources explicitly
+
+xfontsel*background:		gray80
+xfontsel*foreground:		gray30
+xfontsel*font:			-*-times-bold-r-*-*-17-*
+
+xfd*background:			gray80
+xfd*foreground:			gray30
+xfd*font:			-*-times-bold-r-*-*-17-*
+
+xterm*VT100*geometry:		80x25
+xterm*font:			-*-lucidatypewriter-*-*-*-*-14-140-*
+xterm*pointerColor:		red
+xterm*loginShell:		on
+xterm*scrollBar:		on
+xterm*name:			snake
+xterm*saveLines:		500
+
+xman*manualBrowser.Geometry:	840x768
+xman*bothShown:			true
+xman*topBox:			false
+xman*background:		gray80
+xman*foreground:		black
+xman*font:			term.14
