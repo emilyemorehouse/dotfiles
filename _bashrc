@@ -17,18 +17,24 @@ alias cd....='cd ../../../'
 alias cd.....='cd ../../../../'
 alias cd......='cd ../../../../../'
 
+alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
+alias grun='java org.antlr.v4.runtime.misc.TestRig'
+
+alias py_ex='chmod +x *.py'
+
 # Quick access for files
 alias goto_sp='cd ~/Remote\ Storage/Google\ Drive/SPRING\ 2014/'
 alias goto_py='cd ~/Remote\ Storage/Google\ Drive/SPRING\ 2014/CIS4930\ Python'
 
 
 # ALL DA PATH SETTINGS
-# Setting PATH for Python 2.7
 export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 
 export PATH="$PATH:/usr/local/smlnj-110.75/bin"
 
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export CLASSPATH=".:/usr/local/lib/antlr-4.0-complete.jar:$CLASSPATH"
 
 export PATH="$PATH:/Library/PostgreSQL/9.3/bin"
 export PGDATA="/Library/PostgreSQL/9.3/data"
