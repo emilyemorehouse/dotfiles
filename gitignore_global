@@ -1,0 +1,17 @@
+# OS X
+.DS_Store
+._*
+.Trashes
+*~
+
+# Virtualenv
+env/
+env/*
+env2/
+env2/*
+
+# Django
+*.log
+*.pot
+*.pyc
+local_settings.py
