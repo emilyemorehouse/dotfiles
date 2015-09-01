@@ -5,13 +5,17 @@ function cl () {
     cd "$@" && clear && ls -laAhF
     }
 function md () {
-    mkdir "$@" && cl "$@"
+    mkdir -p "$@" && cl "$@"
     }
+function make_screens() {
+    pageres http://localhost:8100/"$@" < ~/Development/CuttleDev/Projects/screen-resolutions.txt
+}
 alias c='clear'
 alias la='ls -a'
 alias ll='ls -l'
 alias l='ls -laAhF'
 alias dir='ls -a'
+alias cmon='sudo $(history -p !!)'
 
 # change directory aliases
 alias cd.='cd .. && ls -lah'
@@ -24,6 +28,7 @@ alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
 alias py_ex='chmod +x *.py'
+alias fix_mamp='ln -s /Applications/MAMP/tmp/mysql/mysql.sock /tmp/mysql.sock'
 
 # Quick access for files
 alias goto_su='cl ~/Remote\ Storage/Google\ Drive/SUMMER\ 2014/'
@@ -31,7 +36,15 @@ alias goto_py='cl ~/Remote\ Storage/Google\ Drive/SPRING\ 2014/CIS4930\ Python'
 alias goto_ncsi='cl ~/Development/NCSI/NCSI_Repo'
 alias goto_llama='cl ~/Documents/FSU\ -\ All/2013-2014/2014-01\ SPRING\ CLASSES/CIS4933\ Honors\ Thesis/'
 
+# Ionic Helpers
+alias platform_reset='ios_reset && android_reset'
+alias ios_reset='ionic platform rm ios && ionic platform add ios'
+alias android_reset='ionic platform rm android && ionic platform add android'
 
+# Project Quick Starts
+alias ws='cl ~/Development/CuttleDev/Projects/WeatherSTEM/weatherstem.mobile && subl . && ionic serve'
+alias ws_android='cordova build --release android && jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore platforms/android/ant-build/CordovaApp-release-unsigned.apk alias_name && /Users/emilyemorehouse/Development/Resources/adt-bundle-mac-x86_64-20140702/sdk/build-tools/android-4.4W/zipalign -v 4 platforms/android/ant-build/CordovaApp-release-unsigned.apk WeatherSTEM.apk'
+alias altru='cl ~/Development/CuttleDev/Projects/Altruist/altruist.mobile && subl . && ionic serve'
 # ALL DA PATH SETTINGS
 export PATH=/usr/local/share/npm/bin:$PATH
 
@@ -50,13 +63,15 @@ export PGHOST=localhost
 
 export PATH="$PATH:/usr/bin/perl"
 
+export PATH="$PATH:/usr/texbin"
+
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 
 
 # show/hide all hidden files using script
-alias togglehidden='sh ~/dotfiles/togglehidden.sh'
+alias togglehidden='sh ~/Development/Configs/dotfiles/togglehidden.sh'
 
 
 # network connection aliases
@@ -79,6 +94,13 @@ export PATH=$PATH:/opt/local/bin
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export PATH=${PATH}:/Users/emilyemorehouse/Development/Android/adt-bundle-mac-x86_64-20140702/sdk/tools:/Users/emilyemorehouse/Development/Android/adt-bundle-mac-x86_64-20140702/sdk/platform-tools
+export ANDROID_HOME='/Users/emilyemorehouse/Development/Resources/adt-bundle-mac-x86_64-20140702/sdk'
+# export PATH=${PATH}:$ANDROID_HOME/bin
+# export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+# export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-i386"
+export ANT_HOME="/opt/ant"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$ANT_HOME/bin"
+
+export PATH=${PATH}:/Users/emilyemorehouse/Development/adt-bundle-mac-x86_64-20140702/sdk/tools:/Users/emilyemorehouse/Development/adt-bundle-mac-x86_64-20140702/sdk/platform-tools
 
 

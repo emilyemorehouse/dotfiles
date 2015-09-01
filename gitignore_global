@@ -1,16 +1,24 @@
-# OS X
+# OS
 .DS_Store
-._*
+Desktop.ini
 .Trashes
 *~
 
-# Virtualenv
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Virtualenvs (just in case)
 env/
 env/*
 env2/
 env2/*
 
-# Django
+# Python/Frameworks/Apps
 *.log
 *.pot
 *.pyc

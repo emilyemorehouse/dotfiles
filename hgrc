@@ -3,4 +3,5 @@ username = Emily Morehouse <emilyemorehouse@gmail.com>
 ignore = ~/.hgignore
 
 [extensions]
+prompt = ~/Development/Configs/hg-prompt/prompt.py
 mq =
