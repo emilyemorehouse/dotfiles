@@ -90,8 +90,12 @@ alias mysql.status="sudo /usr/local/mysql/support-files/mysql.server status"
 
 ##################### ALL DA PATH SETTINGS #####################
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH="/usr/bin/python:${PATH}"
-export PYTHONPATH=usr/bin/python
+# export PATH="/usr/bin/python:${PATH}"
+# export PYTHONPATH=usr/bin/python
+
+export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin/python:${PATH}"
+export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+
 export PATH="$PATH:/usr/local/smlnj-110.75/bin"
 export PATH="/usr/local/heroku/bin:$PATH"
 export CLASSPATH=".:/usr/local/lib/antlr-4.0-complete.jar:$CLASSPATH"
@@ -130,5 +134,9 @@ PS1='\[\e[1;35m\]\u\[\e[0m\]@\[\e[0;33m\]\h\[\e[0m\]:\[\e[1;31m\]\W\[\e[0m\]\> '
 
 # VENV wrapper settings
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+export PROJECT_HOME=$HOME/Development
+VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+
+export NVM_DIR="/Users/emilyemorehouse/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
