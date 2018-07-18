@@ -8,13 +8,16 @@ function cl () {
 # Change and list directory on creation
 function md () {
     mkdir -p "$@" && cl "$@"
-}
-function makescreens() {
+}function makescreens() {
     pageres http://localhost:8100/"$@" < ~/Development/CuttleDev/Projects/screen-resolutions.txt
 }
 # Clone down Cuttlesoft repository
 function cuttleclone() {
-    hg clone ssh://hg@bitbucket.org/cuttlesoft/"$@"
+    git clone ssh://git@github.com/cuttlesoft/"$@"
+}
+# Change to Cuttlesoft project folder
+function cuttleproject() {
+    cl ~/Development/CuttleDev/Project/Clients/"$@"
 }
 
 # Make resources for an Ionic project with different icons for each platform
