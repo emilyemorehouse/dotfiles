@@ -93,40 +93,21 @@ alias mysql.restart="sudo /usr/local/mysql/support-files/mysql.server restart"
 alias mysql.status="sudo /usr/local/mysql/support-files/mysql.server status"
 
 ##################### ALL DA PATH SETTINGS #####################
-export PATH=/usr/local/share/npm/bin:$PATH
-# export PATH="/usr/bin/python:${PATH}"
-# export PYTHONPATH=usr/bin/python
+# custom path settings
+export MANPATH=/usr/local/man:$MANPATH
+export PATH=/usr/local/bin:$PATH  # give /usr/local/bin the highest precedence
+export PATH=$PATH:HOME/bin:/usr/local/opt/python/libexec/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.6/bin
+export PATH=$PATH:$HOME/.fastlane/bin
+export PATH=$PATH:/usr/local/mysql/bin
 
-export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin/python:${PATH}"
-export PYTHONPATH=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+# Android path settings
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/bin
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/26.0.2
 
-export PATH="$PATH:/usr/local/smlnj-110.75/bin"
-export PATH="/usr/local/heroku/bin:$PATH"
-export CLASSPATH=".:/usr/local/lib/antlr-4.0-complete.jar:$CLASSPATH"
-export PATH=$PATH:/opt/local
-export PATH=$PATH:/opt/local/bin
-export PATH="$PATH:/usr/bin/perl"
-export PATH="$PATH:/usr/texbin"
-
-# Postgres path settings
-export PATH="$PATH:/Library/PostgreSQL/9.3/bin"
-export PGDATA="/Library/PostgreSQL/9.3/data"
-export PGHOST=localhost
-
-# RVM path settings
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:/Users/emilyemorehouse/.rvm/gems/ruby-2.2.1/bin"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-export ANDROID_HOME='/Users/emilyemorehouse/Development/Resources/android-sdk-macosx'
-# export PATH=${PATH}:$ANDROID_HOME/bin
-# export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-# export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-i386"
-export ANT_HOME="/opt/ant"
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$ANT_HOME/bin"
-export PATH=${PATH}:/Users/emilyemorehouse/Development/android-sdk-macosx/tools:/Users/emilyemorehouse/Development/android-sdk-macosx/platform-tools
+# Yarn path settings
+export PATH=$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
 
 
 ##################### MISC: colors and settings #####################
