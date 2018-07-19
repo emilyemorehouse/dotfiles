@@ -49,6 +49,7 @@ alias ll='ls -l'
 alias l='ls -laAhF'
 alias dir='ls -a'
 alias cmon='sudo $(history -p !!)'
+alias rm='rmtrash'
 
 # change directory aliases
 alias cd.='cd .. && ls -lah'
