@@ -126,6 +126,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 export NVM_DIR="/Users/emilyemorehouse/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# ASCII settings for click (http://click.pocoo.org/5/python3/)
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # ------------------------ TINY CARE TERMINAL SETTINGS ----------------------- #
 # List of accounts to read the last tweet from, comma separated
 # The first in the list is read by the party parrot.
