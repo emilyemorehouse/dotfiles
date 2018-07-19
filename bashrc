@@ -1,4 +1,4 @@
-##################### ALIASES AND HELPFUL KEYBINDINGS #####################
+# --------------------------- ALIASES AND FUNCTIONS--------------------------- #
 
 # Auto list directory when changing
 # This is one of my favorite things ever.
@@ -92,7 +92,7 @@ alias mysql.stop="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias mysql.restart="sudo /usr/local/mysql/support-files/mysql.server restart"
 alias mysql.status="sudo /usr/local/mysql/support-files/mysql.server status"
 
-##################### ALL DA PATH SETTINGS #####################
+# ------------------------------- PATH SETTINGS ------------------------------ #
 # custom path settings
 export MANPATH=/usr/local/man:$MANPATH
 export PATH=/usr/local/bin:$PATH  # give /usr/local/bin the highest precedence
@@ -109,8 +109,7 @@ export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HO
 # Yarn path settings
 export PATH=$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin
 
-
-##################### MISC: colors and settings #####################
+# ------------------------------- MISC SETTINGS ------------------------------ #
 # TERMINAL COLORS
 export CLICOLOR=1
 export LSCOLORS=FxbxbxdxDxegedabaeaced
